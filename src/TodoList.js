@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import TodoDetails from './TodoDetails';
 import { ThemeContext } from './theme-context';
 import './App.css';
 export default class TodoList extends Component {
@@ -15,7 +14,7 @@ export default class TodoList extends Component {
               <div key={i} onClick={() => this.props.onClick(val.id)}>
                 <div
                   style={{
-                    background: val.color == 'light' ? 'azure' : '#0d1cea',
+                    background: val.color === 'light' ? 'azure' : '#0d1cea',
                   }}
                 >
                   {' '}

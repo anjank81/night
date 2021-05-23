@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import App from './App';
 import { ThemeContext } from './theme-context';
 import './App.css';
 export default class TodoDetails extends Component {
@@ -12,7 +11,7 @@ export default class TodoDetails extends Component {
         {this.context.map((val) => {
           return (
             <div>
-              {val.id == this.props.index && (
+              {val.id === this.props.index && (
                 <div>
                   <input
                     type="text"

@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React from 'react';
 import { ThemeContext, items, itemsDetails } from './theme-context';
 import TodoList from './TodoList';
@@ -31,12 +32,12 @@ export default class App extends React.Component {
       });
       items.map((val) => {
         val.color =
-          val.id === i && i == this.state.index
-            ? val.color == 'dark'
+          val.id === i && i === this.state.index
+            ? val.color === 'dark'
               ? 'light'
               : 'dark'
             : val.color;
-        val.title = val.id == i ? e : val.title;
+        val.title = val.id === i ? e : val.title;
       });
       this.setState({ itemsDetails: itemsDetails, items: items });
     };
